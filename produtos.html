@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Produtos - DSPShop</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <h1>DSPShop</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="produtos.html">Produtos</a>
+        <a href="carrinho.html">Carrinho</a>
+    </nav>
+</header>
+
+<main>
+    <section class="produtos">
+        <h2>Lista de Produtos</h2>
+
+        <div class="produto">
+            <h3>Camiseta Básica</h3>
+            <p>Camiseta 100% algodão, várias cores.</p>
+            <p class="preco">R$ 59,90</p>
+            <button onclick="adicionarAoCarrinho('Camiseta Básica', 59.90)">
+                Adicionar ao Carrinho
+            </button>
+        </div>
+
+        <div class="produto">
+            <h3>Tênis Esportivo</h3>
+            <p>Tênis confortável para atividades físicas.</p>
+            <p class="preco">R$ 199,90</p>
+            <button onclick="adicionarAoCarrinho('Tênis Esportivo', 199.90)">
+                Adicionar ao Carrinho
+            </button>
+        </div>
+
+        <div class="produto">
+            <h3>Mochila Escolar</h3>
+            <p>Mochila resistente com vários compartimentos.</p>
+            <p class="preco">R$ 129,90</p>
+            <button onclick="adicionarAoCarrinho('Mochila Escolar', 129.90)">
+                Adicionar ao Carrinho
+            </button>
+        </div>
+
+        <div class="produto">
+            <h3>Relógio Digital</h3>
+            <p>Relógio moderno com visor LED.</p>
+            <p class="preco">R$ 89,90</p>
+            <button onclick="adicionarAoCarrinho('Relógio Digital', 89.90)">
+                Adicionar ao Carrinho
+            </button>
+        </div>
+
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2026 DSPShop - Todos os direitos reservados.</p>
+</footer>
+
+<script>
+    function adicionarAoCarrinho(nome, preco) {
+        let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+        carrinho.push({ nome, preco });
+        localStorage.setItem("carrinho", JSON.stringify(carrinho));
+        alert("Produto adicionado ao carrinho!");
+    }
+</script>
+
+</body>
+</html>

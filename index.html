@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>DSPShop - Mini E-commerce</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <h1>DSPShop</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="#">Produtos</a>
+        <a href="#">Carrinho</a>
+    </nav>
+</header>
+
+<main>
+    <section class="produtos">
+        <h2>Produtos em Destaque</h2>
+
+        <div class="produto">
+            <h3>Produto 1</h3>
+            <p>Descrição do produto 1.</p>
+            <p class="preco">R$ 99,90</p>
+            <button onclick="adicionarAoCarrinho('Produto 1', 99.90)">
+                Adicionar ao Carrinho
+            </button>
+        </div>
+
+        <div class="produto">
+            <h3>Produto 2</h3>
+            <p>Descrição do produto 2.</p>
+            <p class="preco">R$ 149,90</p>
+            <button onclick="adicionarAoCarrinho('Produto 2', 149.90)">
+                Adicionar ao Carrinho
+            </button>
+        </div>
+
+        <div class="produto">
+            <h3>Produto 3</h3>
+            <p>Descrição do produto 3.</p>
+            <p class="preco">R$ 79,90</p>
+            <button onclick="adicionarAoCarrinho('Produto 3', 79.90)">
+                Adicionar ao Carrinho
+            </button>
+        </div>
+
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2026 DSPShop - Todos os direitos reservados.</p>
+</footer>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
